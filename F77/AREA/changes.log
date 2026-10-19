@@ -1,0 +1,5 @@
+-uses implicit typing
+-uses REAL instead of DOUBLEPRECISION
+-calculates area and circumference of square,rectangle,triangle,or circle
+-uses address sanitizer in compile.sh
+-added compile.bat
