@@ -8,9 +8,10 @@ C CONSTANTS:NONE
 C **********************************************************************
 C VARIABLES:
 C STACK:INTEGER STACK
+C IBUFF:HOLD 1 VALUE POPPED OFF STACK 
 C ITOP:MARKS THE TOP OF STACK
 C **********************************************************************
-      SUBROUTINE IPOP(STACK,ITOP)
+      SUBROUTINE IPOP(STACK,IBUFF,ITOP)
       INTEGER STACK(*)
       
       IF(ITOP.EQ.0)THEN
@@ -18,7 +19,9 @@ C **********************************************************************
        WRITE(*,*)
        RETURN
       ENDIF
-     
+
+C COPY VALUES POPPED OFF STACK IN BUFF (REVERSE ORDER)    
+      IBUFF=STACK(ITOP)  
       STACK(ITOP)=0
       ITOP=ITOP-1
 
