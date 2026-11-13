@@ -4,13 +4,12 @@ C WARNING USES IMPLICIT TYPING
 C **********************************************************************
 C LABELS USED:NONE
 C **********************************************************************
-C CONSTANTS:
-C N:ELEMENTS IN STACK
+C CONSTANTS:NONE
 C **********************************************************************
 C VARIABLES:
 C STACK:REAL STACK
-C ITOP:MARKS THE TOP OF STACK
-C IX:INTEGER TO PUSH
+C ITOP:TOP OF STACK
+C X:REAL VALUE TO PUSH
 C **********************************************************************
       SUBROUTINE RPUSH(STACK,N,ITOP,X)
       REAL STACK(*)

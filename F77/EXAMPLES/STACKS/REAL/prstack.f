@@ -4,12 +4,11 @@ C IF NOT EMPTY
 C WARNING USES IMPLICIT TYPING
 C PAUSES FOR IX INPUT EVERY 20 LINES
 C **********************************************************************
-C LABELS USED: 98999
+C LABELS USED:98999
 C **********************************************************************
-C CONSTANTS
-C N:ELEMENTS IN ISTACK
+C CONSTANTS:NONE
 C **********************************************************************
-C VARIABLES
+C VARIABLES:
 C STACK:STACK (TYPE REAL)
 C ITOP:TOP OF STACK
 C IX:READ FROM USER TO CONTINUE

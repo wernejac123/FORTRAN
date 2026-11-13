@@ -8,8 +8,8 @@ C CONSTANTS:NONE
 C **********************************************************************
 C VARIABLES:
 C STACK:REAL STACK
-C BUFF:HOLD 1 VALUE POPPED OFF STACK 
-C ITOP:MARKS THE TOP OF STACK
+C BUFF:HOLD 1 VALUE POPPED OFF STACK (DEBUGGING) 
+C ITOP:TOP OF STACK 
 C **********************************************************************
       SUBROUTINE RPOP(STACK,BUFF,ITOP)
       REAL STACK(*)
