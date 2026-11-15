@@ -1,0 +1,5 @@
+GUMBLE                         BARNEY                         234-324-6890 NONE                                                                                                
+SIMPSON                        HOMER                          234-234-2343 NONE                                                                                                
+SIMPSON                        MARGE                          345-345-3454 NONE                                                                                                
+SIMPSON                        LISA                           345-453-4565 JAZZ                                                                                                
+SIMPSON                        BART                           465-345-4543 NONE                                                                                                

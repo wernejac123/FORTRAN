@@ -1,0 +1,94 @@
+7/22/26
+	-fix garbage doesn't get written to file. (on write back to file I was 
+comparing J to IM (max entries) instead of IC (line count of file). Skips line 
+between entries written to file. May be normal f77 bahavoir (WRITE adds a 
+newline).
+	-BUG: file gets erased if user opens file,makes no changes, & quits).
+Possible fix: seperate menu item for print buffer & another to write changes.
+NOTE: look at what mode the file is opened in (STATUS=)
+
+BUG: no STATUS=REPLACE in Sun f77 pdf
+probably don't need to reopen file
+
+TO DO:seperate functions and subroutines copy to buffer and write to file
+     -add menu items print buffer and write changes to file
+
+FIXED: don't execute addr in sanitize.sh
+
+7/24/26
+-add writes to a buffer and L,F,PN,M get added to L2,F2,PN2,M2
+-added menu items for 'print buffer' & 'write changes'
+-add loop for print buffer
+
+-STILL NEED: write changes to file
+-ERROR:  no STATUS=REPLACE
+-look at READ,WRITE,and OPEN in Sun f77 manual
+
+7/25/26
+-created add function (does not sort or check uniqueness)
+-need to add a check that IC.LT.IM before an entry is added and error message
+-changed sanitize.sh compile object files (*.o)
+-still need to change compile.sh
+-temporarily removed -Wall 
+-addrbk.f will have unused variables in it and unused labels
+-added prentry in prentry.f (print array of entries)
+
+7/28/26
+-fixed bug (write entry multiple times) 
+-all back -Wall 
+
+7/29/26 
+-fixed format mismatch
+
+8/09/26
+-added comments to entry.f
+-change IM to N
+-add bubble sort (appears to work)
+
+TODO: test more
+
+9/13/26
+-add WRITE(*,*) after printing IC
+-change menu  lookup by lastname & lookup by phone number
+-change J to I in PROGRAM 
+
+9/16/26
+-fix bug plook() not matching strings corretcly
+-changed everything has a unique label
+-modified formats (read as unformatted and print/write formatted with X (space)
+ between each variable
+-lazy test in FreeDOS vm
+
+9/18/26
+-add llook() 
+-BUG: prints found for each entry found
+
+10/18/26
+-add deli()
+-add compile.bat (currently untested)
+
+(change name of program from addrbk to phonebk)
+-ran these commands from /home/jw
+mkdir phonebk
+move addrbk/* phonebk
+rm -r addrbk
+cd phonebk
+cat addrbk.f > phonebk.f
+rm addrbk.f
+
+-editted addrbk.f and compile.sh to reflect this change of name to the program
+-test qemu vm in linux (light testing not every feature)
+
+REMAINING BUGS:
+-prints FOUNDS for every entry found (should only say found once)
+-print should only print a set number of lines at a time (part of this database becomes unviewable as it becomes larger)
+-need clear screen function
+-shouldn't have address sanitizer in final binary (compile.sh)
+-look into optimization (both gcc and watcomf)
+-final version of compile.sh and compile.bat should strip binary
+-this program should be stepped through in gdb (analyze the assembly code)
+-should conisder a GPLv2 licence instead of MIT
+
+-if i strip the binary from a batch file (for DOS) should include binary+source+licence to a program to strip binaries.  
+(for linux/UNIX-like use your package manager to find 'strip'. 
+NOTE:I am leaving debug infomation in the binary and unoptimized for testing purposes  
