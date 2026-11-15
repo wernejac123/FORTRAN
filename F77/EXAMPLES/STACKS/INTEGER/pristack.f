@@ -14,7 +14,7 @@ C STACK: INTEGER STACK
 C ITOP:TOP OF STACK
 C IX:READ FROM USER TO CONTINUE
 C **********************************************************************
-      SUBROUTINE  PR_ISTACK(STACK,ITOP)
+      SUBROUTINE  PRISTACK(STACK,ITOP)
       INTEGER STACK(*)
 
       IF(ITOP.EQ.0)THEN

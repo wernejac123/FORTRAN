@@ -1,3 +1,5 @@
--fixed bug:ipop now stores the value in ibuff
--other changes
--change compile.sh  to use a for loop to create object files (*.o)
+11/15
+-remove IBUFF (and option from menu, in IPOP())
+-read in for menu instead of IMENU1
+-change PR_ISTACK() to PRISTACK()
+-change test.sh to compile.sh (left address sanitizer in binary)
