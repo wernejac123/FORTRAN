@@ -1,0 +1,6 @@
+11/15/26
+-remove buffer
+-change menu input to IN
+-in PROGRAM change to N1
+-change subroutine name to PRSTACK()
+-change test.sh to compile.sh

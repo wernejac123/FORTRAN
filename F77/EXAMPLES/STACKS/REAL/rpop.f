@@ -8,10 +8,9 @@ C CONSTANTS:NONE
 C **********************************************************************
 C VARIABLES:
 C STACK:REAL STACK
-C BUFF:HOLD 1 VALUE POPPED OFF STACK (DEBUGGING) 
 C ITOP:TOP OF STACK 
 C **********************************************************************
-      SUBROUTINE RPOP(STACK,BUFF,ITOP)
+      SUBROUTINE RPOP(STACK,ITOP)
       REAL STACK(*)
       
       IF(ITOP.EQ.0)THEN
@@ -20,8 +19,6 @@ C **********************************************************************
        RETURN
       ENDIF
 
-C COPY VALUES POPPED OFF STACK IN BUFF (REVERSE ORDER)    
-      BUFF=STACK(ITOP)  
       STACK(ITOP)=0
       ITOP=ITOP-1
 

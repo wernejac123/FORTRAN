@@ -13,7 +13,7 @@ C STACK:STACK (TYPE REAL)
 C ITOP:TOP OF STACK
 C IX:READ FROM USER TO CONTINUE
 C **********************************************************************
-      SUBROUTINE  PR_STACK(STACK,ITOP)
+      SUBROUTINE  PRSTACK(STACK,ITOP)
       REAL STACK(*)
 
       IF(ITOP.EQ.0)THEN
