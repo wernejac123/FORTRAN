@@ -15,8 +15,8 @@ C CONSTANTS:NONE
 C **********************************************************************
 C VARIABLES:
 C N1:ELEMENTS IN STACK DSTACK1
-C DSTACK1(IN1):REAL STACK (100 ELEMENTS)
-C IDTOP1:TOP OF RSTACK1
+C DSTACK1(IN1):DOUBLEPRECISION STACK (100 ELEMENTS)
+C IDTOP1:TOP OF DSTACK1
 C X:VALUE TO PUSH ONTO STACK
 C **********************************************************************
       PROGRAM DTEST
